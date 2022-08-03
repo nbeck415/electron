@@ -10,6 +10,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock 
     command: /bin/sh -c "while sleep 1000; do :; done"  
     user: builduser
+    ports:
+      - 8088
+      - 6080
+      - 5901
     cap_add:
       - SYS_PTRACE
     security_opt:
